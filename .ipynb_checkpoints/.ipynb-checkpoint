@@ -1,14 +1,6 @@
 {
  "cells": [
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# Image Data Loading and Visualization\n",
-    "## Data loading functions"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 1,
    "metadata": {},
@@ -79,13 +71,6 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Specify our label conversion and load data"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 2,
    "metadata": {},
@@ -114,13 +99,6 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Count samples in each label category"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 3,
    "metadata": {},
@@ -146,13 +124,6 @@
     "labels = ['angry', 'fear', 'happy', 'sad', 'surprise', 'neutral']\n",
     "print (labels)\n",
     "print (counts)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Plot one image with size"
    ]
   },
   {
@@ -188,13 +159,6 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Set up variables for processing"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 5,
    "metadata": {},
@@ -206,13 +170,6 @@
     "y_train_labels  = [np.argmax(lst) for lst in y_train]\n",
     "y_public_labels = [np.argmax(lst) for lst in y_public]\n",
     "y_private_labels = [np.argmax(lst) for lst in y_private]"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Import scikit-learn functions for classification"
    ]
   },
   {
@@ -236,13 +193,6 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Initialize classifier for training"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 16,
    "metadata": {
@@ -258,13 +208,6 @@
     "    ###############################################\n",
     "\n",
     ")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Prepare label data and train classifier"
    ]
   },
   {
@@ -331,13 +274,6 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Make classifier predictions on new data"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 18,
    "metadata": {},
@@ -358,26 +294,12 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Import scikit-learn functions for analyzing results"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": 13,
    "metadata": {},
    "outputs": [],
    "source": [
     "from sklearn.metrics import classification_report, classification"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Plot confusion matrices of results"
    ]
   },
   {
@@ -427,26 +349,12 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Print classification performance"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
     "print(classification_report(y_test_cat, y_pred))"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Get a list of true class labels"
    ]
   },
   {
@@ -470,13 +378,6 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Get a list of predicted class labels"
-   ]
-  },
-  {
    "cell_type": "code",
    "execution_count": null,
    "metadata": {},
@@ -486,13 +387,6 @@
     "Label_pred = list()\n",
     "for i in y_train_pred:\n",
     "    Label_pred.append(emo[i])"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Plot images with true and predicted labels"
    ]
   },
   {
